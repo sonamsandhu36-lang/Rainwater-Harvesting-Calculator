@@ -1,0 +1,588 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --green: #236d60;
+    --dark-green: #174d45;
+    --light-green: #e8f3ed;
+    --blue: #eaf5f5;
+    --dark: #18332e;
+    --grey: #6d8078;
+    --white: #ffffff;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fbfcfa;
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 7%;
+    background: white;
+    border-bottom: 1px solid #e4ece7;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    color: var(--dark-green);
+}
+
+.logo span {
+    color: #70b395;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #536961;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--green);
+}
+
+.hero {
+    min-height: 490px;
+    padding: 75px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    background: linear-gradient(120deg, #fbfcfa, #eaf5f0);
+}
+
+.hero-content {
+    max-width: 570px;
+}
+
+.tagline {
+    color: var(--green);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: clamp(42px, 5vw, 65px);
+    line-height: 1.13;
+    margin-bottom: 20px;
+    letter-spacing: -2px;
+}
+
+h1 span,
+.section-heading h2 span {
+    color: var(--green);
+}
+
+.hero-text {
+    color: var(--grey);
+    font-size: 15px;
+    max-width: 490px;
+    margin-bottom: 28px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--green);
+    color: white;
+    padding: 14px 22px;
+    border: none;
+    border-radius: 7px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: var(--dark-green);
+    transform: translateY(-2px);
+}
+
+.hero-image {
+    width: 350px;
+    min-height: 290px;
+    border-radius: 50%;
+    background: #dcefe7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.house {
+    font-size: 105px;
+    line-height: 1.4;
+}
+
+.rain-icon,
+.water-icon {
+    font-size: 31px;
+}
+
+.hero-image p {
+    color: var(--green);
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 6px;
+}
+
+.calculator-section,
+.tips-section {
+    padding: 75px 7%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-heading h2 {
+    font-size: clamp(29px, 4vw, 40px);
+    line-height: 1.25;
+    margin-bottom: 12px;
+}
+
+.section-heading > p:last-child {
+    color: var(--grey);
+    font-size: 14px;
+}
+
+.calculator-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: stretch;
+}
+
+.input-card,
+.result-card {
+    padding: 30px;
+    border-radius: 14px;
+    border: 1px solid #e0e9e3;
+}
+
+.input-card {
+    background: white;
+    box-shadow: 0 8px 30px rgba(23, 77, 69, 0.04);
+}
+
+.input-card h3 {
+    font-size: 21px;
+    margin-bottom: 25px;
+}
+
+form label {
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 17px 0 8px;
+}
+
+form input[type="number"],
+form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d9e5de;
+    border-radius: 7px;
+    outline: none;
+    background: #fcfdfc;
+    color: var(--dark);
+    font-size: 13px;
+}
+
+form input:focus,
+form select:focus {
+    border-color: #6aa58e;
+}
+
+form input[type="range"] {
+    width: 100%;
+    accent-color: var(--green);
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+.calculate-btn {
+    width: 100%;
+    margin-top: 27px;
+}
+
+.result-card {
+    background: var(--dark-green);
+    color: white;
+}
+
+.result-label {
+    color: #b5d7c7;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+}
+
+.result-card > h2 {
+    font-size: clamp(32px, 4vw, 45px);
+    margin: 12px 0 4px;
+    overflow-wrap: anywhere;
+}
+
+.result-card > h2 small {
+    color: #9bc8b4;
+    font-size: 15px;
+}
+
+.result-description {
+    font-size: 12px;
+    color: #b9d2c7;
+    margin-bottom: 24px;
+}
+
+.result-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.result-box {
+    padding: 16px 12px;
+    border-radius: 9px;
+    background: rgba(255, 255, 255, 0.07);
+    min-width: 0;
+}
+
+.result-box > span {
+    font-size: 22px;
+}
+
+.result-box p {
+    color: #b8d2c6;
+    font-size: 11px;
+    margin: 5px 0;
+}
+
+.result-box h3 {
+    font-size: 19px;
+    overflow-wrap: anywhere;
+}
+
+.result-box h3 span {
+    font-size: inherit;
+}
+
+#impact {
+    font-size: 13px;
+}
+
+.recommendation {
+    padding: 17px;
+    margin-top: 22px;
+    border-radius: 9px;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.recommendation h3 {
+    font-size: 13px;
+    margin-bottom: 7px;
+}
+
+.recommendation p {
+    color: #c1d9cd;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.download-btn {
+    width: 100%;
+    text-align: left;
+    padding: 16px 0 0;
+    margin-top: 18px;
+    border: 0;
+    border-top: 1px solid rgba(255,255,255,.15);
+    background: transparent;
+    color: #c1dfd0;
+    font-weight: bold;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.download-btn:hover {
+    color: white;
+}
+
+.note {
+    max-width: 1100px;
+    margin: 15px auto 0;
+    color: #7b8d84;
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+.about-section {
+    padding: 75px 7%;
+    background: #eff6f1;
+}
+
+.formula-card {
+    max-width: 850px;
+    margin: 0 auto 35px;
+    padding: 30px;
+    border: 1px solid #dbe8df;
+    border-radius: 12px;
+    background: white;
+    text-align: center;
+}
+
+.formula-card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.formula {
+    color: var(--green);
+    font-size: clamp(15px, 2.5vw, 22px);
+    font-weight: bold;
+    margin-bottom: 13px;
+}
+
+.formula-card p:last-child {
+    font-size: 12px;
+    color: var(--grey);
+}
+
+.steps {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.step {
+    padding: 25px;
+    background: white;
+    border: 1px solid #e0e9e3;
+    border-radius: 12px;
+}
+
+.step > span {
+    display: grid;
+    place-items: center;
+    width: 37px;
+    height: 37px;
+    border-radius: 9px;
+    background: var(--light-green);
+    color: var(--green);
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.step h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.step p {
+    font-size: 12px;
+    color: var(--grey);
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 17px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.tip-card {
+    background: white;
+    padding: 23px;
+    border: 1px solid #e1e9e4;
+    border-radius: 12px;
+    transition: 0.2s;
+}
+
+.tip-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(23, 77, 69, 0.07);
+}
+
+.tip-card > span {
+    font-size: 29px;
+}
+
+.tip-card h3 {
+    font-size: 15px;
+    margin: 13px 0 8px;
+}
+
+.tip-card p {
+    color: var(--grey);
+    font-size: 12px;
+}
+
+footer {
+    padding: 30px 7%;
+    text-align: center;
+    background: #153f38;
+    color: white;
+}
+
+footer .logo {
+    color: white;
+    margin-bottom: 7px;
+}
+
+footer p {
+    color: #c1d8cd;
+    font-size: 12px;
+}
+
+footer .footer-note {
+    max-width: 600px;
+    margin: 10px auto 0;
+    font-size: 10px;
+    color: #a7c6b7;
+}
+
+@media (max-width: 900px) {
+    header {
+        padding: 18px 4%;
+    }
+
+    nav {
+        gap: 14px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 60px 5%;
+    }
+
+    .hero-image {
+        width: 270px;
+        min-height: 270px;
+    }
+
+    .calculator-section,
+    .tips-section,
+    .about-section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .calculator-container {
+        gap: 15px;
+    }
+
+    .input-card,
+    .result-card {
+        padding: 22px;
+    }
+
+    .tips-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    header {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: space-between;
+        gap: 8px;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 50px;
+        gap: 35px;
+    }
+
+    .hero-image {
+        align-self: center;
+        width: 250px;
+        min-height: 250px;
+    }
+
+    .house {
+        font-size: 85px;
+    }
+
+    .calculator-container {
+        grid-template-columns: 1fr;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .tips-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .tip-card {
+        padding: 17px;
+    }
+
+    .formula-card {
+        padding: 20px 14px;
+    }
+}
+
+@media (max-width: 370px) {
+    nav a {
+        font-size: 10px;
+    }
+
+    .tips-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .result-grid {
+        grid-template-columns: 1fr;
+    }
+}

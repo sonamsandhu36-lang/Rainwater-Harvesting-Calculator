@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RainWise | Rainwater Harvesting Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="logo">RainWise<span>.</span></div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#calculator">Calculator</a>
+            <a href="#about">About</a>
+            <a href="#tips">Water Saving Tips</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="tagline">SMART WATER CONSERVATION</p>
+            <h1>Every Drop Has a <span>Purpose.</span></h1>
+            <p class="hero-text">
+                Discover how much rainwater your rooftop can collect.
+                Calculate your potential, conserve water, and build a
+                more sustainable future.
+            </p>
+            <a href="#calculator" class="btn">Calculate Rainwater →</a>
+        </div>
+
+        <div class="hero-image">
+            <div class="rain-icon">💧</div>
+            <div class="house">🏡</div>
+            <div class="water-icon">🌧️</div>
+            <p>Harvest Rain. Save Water.</p>
+        </div>
+    </section>
+
+    <section class="calculator-section" id="calculator">
+        <div class="section-heading">
+            <p class="tagline">YOUR ROOFTOP, YOUR IMPACT</p>
+            <h2>Rainwater <span>Calculator</span></h2>
+            <p>Enter your rooftop details to estimate annual rainwater collection.</p>
+        </div>
+
+        <div class="calculator-container">
+
+            <div class="input-card">
+                <h3>Enter Your Details</h3>
+
+                <form id="rainForm">
+                    <label for="area">Rooftop Area (m²)</label>
+                    <input type="number" id="area" min="1" step="any"
+                           placeholder="e.g. 100" required>
+
+                    <label for="rainfall">Annual Rainfall (mm)</label>
+                    <input type="number" id="rainfall" min="1" step="any"
+                           placeholder="e.g. 800" required>
+
+                    <label for="roof">Roof Material</label>
+                    <select id="roof">
+                        <option value="0.90">Metal / Smooth Concrete</option>
+                        <option value="0.80" selected>Concrete / Tiled Roof</option>
+                        <option value="0.75">Mixed Surface</option>
+                        <option value="0.70">Rough / Porous Surface</option>
+                    </select>
+
+                    <label for="efficiency">
+                        Collection Efficiency: <span id="efficiencyValue">90%</span>
+                    </label>
+                    <input type="range" id="efficiency"
+                           min="50" max="100" value="90" step="5">
+
+                    <button type="submit" class="btn calculate-btn">
+                        Calculate My Yield →
+                    </button>
+                </form>
+            </div>
+
+            <div class="result-card" aria-live="polite">
+                <p class="result-label">YOUR ESTIMATED ANNUAL HARVEST</p>
+                <h2><span id="annualYield">0</span> <small>Litres</small></h2>
+                <p class="result-description">
+                    Estimated rainwater collected in one year.
+                </p>
+
+                <div class="result-grid">
+                    <div class="result-box">
+                        <span>📅</span>
+                        <p>Monthly Average</p>
+                        <h3><span id="monthlyYield">0</span> L</h3>
+                    </div>
+
+                    <div class="result-box">
+                        <span>💧</span>
+                        <p>Daily Average</p>
+                        <h3><span id="dailyYield">0</span> L</h3>
+                    </div>
+
+                    <div class="result-box">
+                        <span>↘</span>
+                        <p>Estimated Losses</p>
+                        <h3><span id="losses">0</span> L</h3>
+                    </div>
+
+                    <div class="result-box">
+                        <span>🌱</span>
+                        <p>Water Conservation</p>
+                        <h3 id="impact">Start Saving!</h3>
+                    </div>
+                </div>
+
+                <div class="recommendation">
+                    <h3>💡 Recommendation</h3>
+                    <p id="recommendationText">
+                        Enter your details and calculate your rainwater potential.
+                    </p>
+                </div>
+
+                <button type="button" id="downloadBtn" class="download-btn">
+                    Download Result Summary ↓
+                </button>
+            </div>
+
+        </div>
+        <p class="note">
+            Note: These results are estimates. Actual collection depends on
+            rainfall patterns, roof conditions, and system maintenance.
+        </p>
+    </section>
+
+    <section class="about-section" id="about">
+        <div class="section-heading">
+            <p class="tagline">HOW IT WORKS</p>
+            <h2>The Science Behind <span>Rainwater Harvesting</span></h2>
+        </div>
+
+        <div class="formula-card">
+            <h3>Rainwater Harvesting Formula</h3>
+            <p class="formula">
+                Water Yield (L) = Area × Rainfall × Runoff Coefficient × Efficiency
+            </p>
+            <p>
+                One millimetre of rainfall over one square metre of area
+                equals approximately one litre of water.
+            </p>
+        </div>
+
+        <div class="steps">
+            <div class="step">
+                <span>01</span>
+                <h3>Collect Rainfall</h3>
+                <p>Rain falls on the rooftop and flows into the gutters.</p>
+            </div>
+            <div class="step">
+                <span>02</span>
+                <h3>Filter the Water</h3>
+                <p>Filters and first-flush systems help remove debris and initial runoff.</p>
+            </div>
+            <div class="step">
+                <span>03</span>
+                <h3>Store and Reuse</h3>
+                <p>Collect water for suitable uses such as gardening and cleaning.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="tips-section" id="tips">
+        <div class="section-heading">
+            <p class="tagline">MAKE EVERY DROP COUNT</p>
+            <h2>Water Saving <span>Tips</span></h2>
+        </div>
+
+        <div class="tips-grid">
+            <div class="tip-card">
+                <span>🧹</span>
+                <h3>Clean Your Gutters</h3>
+                <p>Remove leaves and debris regularly to maintain water flow.</p>
+            </div>
+            <div class="tip-card">
+                <span>🛢️</span>
+                <h3>Use Covered Tanks</h3>
+                <p>Keep storage tanks covered and properly maintained.</p>
+            </div>
+            <div class="tip-card">
+                <span>🌿</span>
+                <h3>Reuse Rainwater</h3>
+                <p>Use collected water for gardening and other suitable non-drinking purposes.</p>
+            </div>
+            <div class="tip-card">
+                <span>🌍</span>
+                <h3>Save Groundwater</h3>
+                <p>Consider a properly designed recharge system where suitable.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="logo">CHE PROJECT<span>.</span></div>
+        <p>A Student Environmental Project | Save Water, Secure the Future</p>
+        <p class="footer-note">
+            Educational calculator. Rainwater should be treated and tested
+            appropriately before drinking.
+        </p>
+    </footer>
+
+</body>
+</html>
